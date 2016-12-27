@@ -1,0 +1,69 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: "Helvetica Neue", "Helvetica", "Segoe UI", "Arial", freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	word-wrap: break-word;
+}
+
+pre {
+	font-family: "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
+}
+
+/**
+ * Change the Box Model behavior to act more naturally:
+ *
+ * https://css-tricks.com/box-sizing
+ * https://paulirish.com/2012/box-sizing-border-box-ftw
+ *
+ * IE6 & IE7 require a polyfill to get box-sizing working:
+ * https://github.com/Schepp/box-sizing-polyfill
+ *
+ * Issue: IE <= 8 and old Firefox do not recognize
+ *        border-box on elements with min/max-height.
+ */
+
+*,
+*:before,
+*:after {
+	*behavior: url(boxsizing.htc);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/**
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ *
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/**
+ * Remove default fieldset gap and borders:
+ */
+
+fieldset {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+/**
+ * Allow only vertical resizing of textareas:
+ */
+
+textarea {
+	resize: vertical;
+}
